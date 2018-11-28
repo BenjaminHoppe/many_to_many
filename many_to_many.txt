@@ -1,0 +1,86 @@
+Many to Many Exercise:
+Part 1
+----------------------
+----------------------
+1.
+Film: ID, Title, Year
+Viewer: ID, Name, Age
+Viewings: Viewer_ID, Film_ID
+----------------------
+2.
+Worker: ID, Name, Wage
+Shift: ID, Day/Time
+Worker_shift:
+Worker_ID
+Shift_ID
+(joint table)
+----------------------
+3.
+Chapter: ID, Title, Book_ID
+Book: ID, Year, Title
+Author: ID, Name
+Reader: ID, Name, Age
+Readings: Book_ID, Reader_ID
+Author_Book: Author_ID, Book_ID
+----------------------
+----------------------
+Part 2
+----------------------
+----------------------
+1
+Comic  [1 <---> many] Issue
+Artist [1 <---> many] Issue
+Artist [1 <---> many] Comics
+Writer [1 <---> many] Comics
+Writer [1 <---> many] Issue
+----------------------
+2
+Song [1 <---> many] Instrument
+Set_list [1 <---> many] Song
+Tour_dates [1 <---> many] Set_list
+----------------------
+3
+Exhibit [1 <---> many] Artwork
+Gallery [1 <---> many] Exhibit
+Artwork [1 <---> many] Artist
+----------------------
+4
+Music_piece [1 <---> many] Sheet_music
+Sheet_music [1 <---> many] Instrument
+----------------------
+----------------------
+Part 3
+----------------------
+----------------------
+1
+Resturant: ID, Name
+User: ID, Name
+Dish: ID, Name, Restaurant_ID
+Order: ID, Dish_ID, User_ID
+
+Resturant [1 <---> many] Order
+Resturant [1 <---> many] Dish
+Order [1 <---> many] Resturant
+Order [1 <---> many] User
+User [1 <---> many] Order
+----------------------
+2
+Airline: ID, Name
+Flight: ID, From, Departure_Time, Arrival_Time, Airline_ID
+Passenger: ID, Name, Flight_ID
+Crew: ID, Name, Flight_ID
+
+Flight [1 <---> many] Crew
+Flight [1 <---> many] Passenger
+Airline [1 <---> many] Flights
+----------------------
+3
+Artist: ID, Name
+Song: ID, Name, Artist_ID
+Listener: ID, Name
+Subscription: Listener_ID, Artist_ID
+
+Artist [1 <---> many] Track
+Listener [1 <---> many] Subscription
+----------------------
+----------------------
